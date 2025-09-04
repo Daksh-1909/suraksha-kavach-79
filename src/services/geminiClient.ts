@@ -4,7 +4,12 @@ import { GoogleGenerativeAI, type GenerativeModel } from "@google/generative-ai"
 let model: GenerativeModel | null = null;
 let initError: string | null = null;
 
-export function getGeminiModel() {
+interface GeminiInitResult {
+  model: GenerativeModel | null;
+  initError: string | null;
+}
+
+export function getGeminiModel(): GeminiInitResult {
   if (model) return { model, initError };
 
   const apiKey = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
@@ -13,7 +18,7 @@ export function getGeminiModel() {
 
   if (!apiKey) {
     initError =
-      "Missing API key. Add VITE_GEMINI_API_KEY in .env.local and restart.";
+      "❌ Missing API key. Add VITE_GEMINI_API_KEY in .env.local and restart.";
     return { model: null, initError };
   }
 
@@ -21,8 +26,17 @@ export function getGeminiModel() {
     const genAI = new GoogleGenerativeAI(apiKey);
     model = genAI.getGenerativeModel({ model: modelId });
     return { model, initError: null };
-  } catch (err: any) {
-    initError = err?.message || "Failed to initialize Gemini model.";
+  } catch (err) {
+    if (err instanceof Error) {
+      initError = err.message;
+    } else {
+      initError = "❌ Failed to initialize Gemini model.";
+    }
+
+    if (import.meta.env.DEV) {
+      console.error("[Gemini Init Error]", err);
+    }
+
     return { model: null, initError };
   }
 }
