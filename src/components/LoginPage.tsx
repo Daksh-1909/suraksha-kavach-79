@@ -43,7 +43,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onGoToRegister, onGoToFo
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-primary/10 rounded-full">
-                <img src="/lovable-uploads/08fe0bbc-e137-47ec-9f75-6abf205c0e4c.png" alt="SafeEd Logo" className="w-12 h-12" />
+                <img src="/uploads/08fe0bbc-e137-47ec-9f75-6abf205c0e4c.png" alt="SafeEd Logo" className="w-12 h-12" />
               </div>
             </div>
             <h1 className="text-2xl font-bold text-foreground mb-2">Welcome Back</h1>

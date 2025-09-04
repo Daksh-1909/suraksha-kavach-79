@@ -60,7 +60,7 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
       <div className="text-center px-4 sm:px-6">
         <div className="inline-flex items-center gap-2 sm:gap-3 mb-4">
           <div className="p-2 sm:p-3 bg-primary/10 rounded-full">
-            <img src="/lovable-uploads/08fe0bbc-e137-47ec-9f75-6abf205c0e4c.png" alt="SafeEd Logo" className="w-8 h-8 sm:w-12 sm:h-12" />
+            <img src="/uploads/08fe0bbc-e137-47ec-9f75-6abf205c0e4c.png" alt="SafeEd Logo" className="w-8 h-8 sm:w-12 sm:h-12" />
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
             Welcome to Suraksha Kavach
