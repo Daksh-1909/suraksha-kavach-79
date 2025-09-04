@@ -43,9 +43,7 @@ export const Navigation = ({ activeTab, onTabChange, userRole, hasAlert = false 
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <AlertTriangle className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img src="/lovable-uploads/08fe0bbc-e137-47ec-9f75-6abf205c0e4c.png" alt="SafeEd Logo" className="w-8 h-8" />
               <span className="text-xl font-bold text-foreground">SafeEd</span>
               {hasAlert && (
                 <Badge className="bg-emergency text-emergency-foreground animate-pulse-glow">
