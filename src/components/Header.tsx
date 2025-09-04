@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({
       <div className="flex justify-between items-center">
         {/* Logo and Title */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <img src="/lovable-uploads/08fe0bbc-e137-47ec-9f75-6abf205c0e4c.png" alt="Suraksha Kavach Logo" className="w-6 h-6 sm:w-8 sm:h-8" />
+          <img src="/lovable-uploads/08fe0bbc-e137-47ec-9f75-6abf205c0e4c.png" alt="Suraksha Kavach Logo" className="w-8 h-8 sm:w-12 sm:h-12" />
           <h1 className="text-lg sm:text-2xl font-semibold text-foreground hidden xs:block">
             Suraksha Kavach
           </h1>
